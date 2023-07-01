@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	  <title>AuroraTech</title>
+  <link rel = "icon" href ="http://drive.google.com/uc?export=view&id=1R4YAfu9IN45R0muMUcXTkFQy6UibePON"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<script>
+		// JSON example
+		const myObject = {
+      Note: 'This website is patented and All rights were reserved. Anyone who tries to steal this will be punished.'};
+		const myJSON = JSON.stringify(myObject);
+		console.log(myJSON);
+	</script>
+
+<hr>
+<header class="text-black-900 body-font font-size-20">
+  <div class="container1 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-black-5000 mb-4 md:mb-0">
+
+      <a href="{% url 'base' %}" class="ml-3 text-xl" style="font-size:75px;font-family:algerian;color:black;text-shadow:1px 1px white,0 0 25px #0066ff,0 0 5px blue">AuroraTech</a>
+    </a>
+</hr>
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" style="font-size:18px">
+      <a href="/"class="mr-5">Home</a>
+        <a onclick="profile()" href="/"class="mr-5 hover:text-blue-500">Profile</a>
+        <a href="{% url 'About' %}"class="mr-5 hover:text-blue-500">About</a>
+        <a  href="{% url 'Contact' %}"class="mr-5 hover:text-blue-500">Contact</a>
+        <a onclick="appoint()" href="/"class="mr-5 hover:text-blue-500">Sign In</a>
+    </nav>
+    <button onclick="booknow()" class="inline-flex items-center bg-yellow-200 border-0 py-1 px-3 focus:outline-none hover:bg-blue-200 rounded text-base mt-4 md:mt-0" style="font-size:18px">Register Now
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 30 30">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <script>
+      function booknow() {
+      window.open("http://127.0.0.1:8000/register");
+      }
+    </script>
+      <script>
+          function appoint() {
+          window.open("http://127.0.0.1:8000/login");
+          }
+          </script>
+          <script>
+          function contact() {
+          alert("Mobile: 6302147254, Landline: 0891 - 273331 ");
+          }
+          </script>
+          <script>
+          function profile() {
+          alert("Please log in to see your profile");
+          }
+          </script>
+  </div>
+</header>
+{% block content %}
+{% endblock content %}
+</body>
+</html>

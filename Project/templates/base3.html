@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>AuroraTech-{{ user.username }}</title>
+  <link rel = "icon" href ="http://drive.google.com/uc?export=view&id=1R4YAfu9IN45R0muMUcXTkFQy6UibePON"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <script>
+    // JSON example
+    const myObject = {
+      Note: 'This website is patented and All rights were reserved. Anyone who tries to steal this will be punished.'};
+    const myJSON = JSON.stringify(myObject);
+    console.log(myJSON);
+  </script>
+  <script>
+          function log(){
+          alert("You are going to logout");
+          }
+    </script>
+<hr>
+<header class="text-black-900 body-font font-size-20">
+  <div class="container1 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-black-5000 mb-4 md:mb-0">
+
+      <a href="{% url 'profile' %}" class="ml-3 text-xl" style="font-size:75px;font-family:algerian;color:black;text-shadow:1px 1px white,0 0 25px #0066ff,0 0 5px blue">AuroraTech</a>
+    </a>
+</hr>
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" style="font-size:18px">
+      <a href="{% url 'profile' %}"class="mr-5 hover:text-blue-500">Home</a>
+        <a  href="{% url 'profile1' %}" class="mr-5 hover:text-blue-500">Profile</a>
+        <a href="{% url 'About1' %}"class="mr-5 hover:text-blue-500">About</a>
+        <a  href="{% url 'Contact1' %}" class="mr-5 hover:text-blue-500">Contact</a>
+        <a onclick="log()" href="{% url 'base' %}"class="mr-5 hover:text-blue-500">Logout</a>
+    </nav>
+  </div>
+</header>
+{% block content %}
+{% endblock content %}
+</body>
+</html>

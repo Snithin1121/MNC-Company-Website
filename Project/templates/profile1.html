@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base3.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .ram{
+        display:block;
+         justify-content:center;
+            align-items:center;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<div>
+  <h1  style="color:blue;background-image:url(http://drive.google.com/uc?export=view&id=14d-iuEfms2DxOGNXf26laKzdptijy5O-);width:308px;height:600px;font-size:30px;"><br><br><br><br><br><br><br><br> Welcome,<br> {{ user.username }}
+  </h1>
+    <span class="glyphicon glyphicon-stop"></span>
+</center>
+</div>
+
+</body>
+{% endblock %}

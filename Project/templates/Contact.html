@@ -1,0 +1,40 @@
+{% extends 'base2.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<head>
+    <style>
+        .glyphicon {
+          font-size: 20px;
+          margin-right: 5px;
+        }
+
+        .text1 {
+          font-size: 25px;
+
+        }
+        url{
+        width:80%
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div style="padding:30px;margin:20px;background:url('http://drive.google.com/uc?export=view&id=1TtVopcMXMQfWFAL9gnErJUZ6fIBt0HJv');height:700px"/>
+    <h1> Phone</h1>
+    <span class="glyphicon glyphicon-earphone"></span>
+    <span class="text1"> &nbsp;6302147254</span><br>
+        <i class="glyphicon glyphicon-phone-alt"></i>
+    <span class="text1"> &nbsp;0891-273331</span><br>
+    <h1>Email</h1>
+        <i class="glyphicon glyphicon-envelope"></i>
+        <a class="text1 danger" href = "mailto: snithin1121@gmail.com" style="color:white">&nbsp;AuroraTech@gmail.com</a><br>
+<a class="fa fa-facebook-f" href="https://www.facebook.com/" style="font-size:36px ;color:darkblue"></a>&emsp;
+<a class="fa fa-instagram" href="https://www.instagram.com/" style="font-size:36px  ;color:red"></a>&emsp;
+<a class="fa fa-twitter" href="https://www.twitter.com/"" style="font-size:36px;color:darkblue"></a>
+
+     </div>
+</body>
+
+{% endblock content %}
